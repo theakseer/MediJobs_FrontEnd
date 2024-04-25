@@ -3,6 +3,9 @@ import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "./Errorpage";
 import Home from "../pages/Home";
 import { About } from "../pages/About";
+import Contact from "../pages/Contact";
+import OurPolicy from "../pages/OurPolicy";
+import JobApplication from "../pages/JobApplication";
 
 const router = createBrowserRouter([
     {
@@ -11,10 +14,9 @@ const router = createBrowserRouter([
         children: [
             { path: "/", element: <Home /> },
             { path: "/about", element: <About /> },
-            { path: "/jobs", element: <About /> },
-            { path: "/about", element: <About /> },
-            { path: "/contact", element: <About /> },
-            { path: "/privacy-policy", element: <About /> },
+            { path: "/job/:jobId", element: <JobApplication jobId /> },
+            { path: "/contact", element: <Contact /> },
+            { path: "/privacy-policy", element: <OurPolicy /> },
 
         ],
         errorElement: <ErrorPage />,

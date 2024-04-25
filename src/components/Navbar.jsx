@@ -14,7 +14,7 @@ const Navbar = () => {
 
     const navItems = [
         { path: "/", title: "Start a search" },
-        { path: "/jobs", title: "Jobs" },
+        // { path: "/", title: "Jobs" },
         { path: "/about", title: "About Us" },
         { path: "/contact", title: "Contact Us" },
         { path: "/privacy-policy", title: "Our Policy" },
@@ -32,7 +32,7 @@ const Navbar = () => {
                     {
                         navItems.map(({ path, title }) =>
                             <li key={path}>
-                                <NavLink to={path} className={({ isActive, isPending }) => { isActive ? 'active' : isPending ? 'pending' : "" }}>{title}</NavLink>
+                                <NavLink to={path} className={({ isActive }) => isActive ? "text-blue-500" : "text-black"}>{title}</NavLink>
                             </li>
                         )
                     }
